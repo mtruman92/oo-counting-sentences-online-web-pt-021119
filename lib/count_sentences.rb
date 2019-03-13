@@ -18,7 +18,7 @@ class String
   end
 
   def count_sentences
-    sentence = self.split('.?!')
+    sentence = self.split(/.?!/)
     sentence.delete_if{|sentence| sentence.empty?}
     sentence.length
   end
