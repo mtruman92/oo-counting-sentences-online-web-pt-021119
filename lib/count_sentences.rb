@@ -8,17 +8,18 @@ class String
   end
 
   def question?
-    self.end_with?("?")
+    self.end_with?("?") ? true: false
 
   end
 
   def exclamation?
-    self.end_with?("!")
+    self.end_with?("!") ? true:false
 
   end
 
   def count_sentences
-    self.count_sentences
-
+    sentence = self.split(.?!)
+    sentence.delete_if{|sentence| sentence.empty?}
+    sentence.length
   end
 end
